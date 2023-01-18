@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 10px;
+    height: 100vh;
+}
+
+.keyboard_wrapp {
+    max-width: 1000px;
+    width: 100%;
+    background-color: #e7e7e7;
+    overflow: hidden;
+    position: relative;
+    order: 2;
+}
+
+.row {
+    display: flex;
+    justify-content: space-around;
+}
+
+.key {
+    width: 60px;
+    height: 60px;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 6px;
+    border-radius: 5px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.backspace_key,
+.enter_key,
+.shift_key_left,
+.caps_lock {
+    width: 120px;
+}
+
+.shift_key_right {
+    width: 135px;
+}
+
+.space_key {
+    width: 500px;
+}
+
+.text {
+    max-width: 1000px;
+    width: 100%;
+    min-height: 90px;
+    height: auto;
+    border: none;
+    overflow: auto;
+    background-color: #e7e7e7;
+    padding-left: 10px;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.key.active {
+    background-color: #333;
+    color: white;
+}
+
+.key.remove {
+    animation: animation_key 0.5s forwards;
+}
+
+@keyframes animation_key {
+    0% {
+        background-color: #333;
+        color: white;
+    }
+
+    100% {
+        background-color: whitesmoke;
+        color: black;
+    }
+}
